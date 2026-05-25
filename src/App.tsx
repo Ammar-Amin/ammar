@@ -1,13 +1,16 @@
-import CustomCursor from './components/CustomCursor'
-import StatusBar from './components/StatusBar'
-import Hero from './components/Hero'
-import Ticker from './components/Ticker'
-import About from './components/About'
-import Experience from './components/Experience'
-import Projects from './components/Projects'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import KonamiOverlay from './components/KonamiOverlay'
+import {
+  CustomCursor,
+  StatusBar,
+  Hero,
+  Ticker,
+  About,
+  Experience,
+  Projects,
+  Contact,
+  Footer,
+  KonamiOverlay,
+  HireMe,
+} from "./components";
 
 export default function App() {
   return (
@@ -18,11 +21,12 @@ export default function App() {
       <Hero />
       <Ticker />
       <About />
+      <HireMe />
       <Experience />
       <Projects />
       <Contact />
       <Footer />
       <KonamiOverlay />
     </>
-  )
+  );
 }
