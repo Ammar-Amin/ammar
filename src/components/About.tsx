@@ -130,12 +130,9 @@ export default function About() {
               {visits > 0 ? visits.toLocaleString() : "—"}
             </div>
             <div className="font-mono text-xs text-muted tracking-[3px] mt-1.5">
-              PEOPLE HAVE BEEN HERE
+              HELLO AGAIN, STRANGER
               <br />
-              you are number{" "}
-              <span className="text-accent2">
-                #{visits > 0 ? visits.toLocaleString() : "—"}
-              </span>
+              <span className="text-accent2">GLAD YOU MADE IT</span>
             </div>
           </div>
         </div>
