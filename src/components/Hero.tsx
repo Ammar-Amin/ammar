@@ -24,7 +24,7 @@ export default function Hero() {
       </h1>
 
       <p
-        className="font-mono text-[clamp(14px,2.5vw,22px)] text-muted mb-8 opacity-0 animate-fadeUp"
+        className="h-10 font-mono text-[clamp(14px,2.5vw,22px)] text-muted mb-8 opacity-0 animate-fadeUp"
         style={{ animationDelay: "0.5s" }}
       >
         <span className="text-accent2">{typingText}</span>
@@ -39,10 +39,12 @@ export default function Hero() {
         <strong className="text-text">
           fast, correct, and slightly addictive
         </strong>
-        . Currently shipping enterprise Angular at{" "}
+        . Currently shipping enterprise Angular applications at{" "}
         <span className="highlight-box">Blackcurrant Labs</span> for Blue Star
-        India. Previously: a React fanboy. Always: curious. Occasionally: a
-        chaos agent.
+        India.
+        <br />
+        Previously: a React fanboy. Always: curious. Occasionally: responsible
+        for chaos.
       </p>
 
       <div

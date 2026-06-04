@@ -57,24 +57,22 @@ export default function About() {
             I'm a <strong className="text-text">Frontend Developer</strong> at
             Blackcurrant Labs, building enterprise-grade Angular applications
             for clients like Blue Star India. I like interfaces that feel{" "}
-            <span className="text-accent2">inevitable</span>, the kind where
+            <span className="text-accent2">inevitable</span> — the kind where
             users stop noticing the UI and just get things done.
           </p>
+
           <p className="text-[17px] leading-[1.8] text-[#aaa] mb-6">
-            Right now I'm building{" "}
-            <strong className="text-text">ChillMaster</strong> — a cloud-based
-            chiller selection platform for Blue Star India through Blackcurrant
-            Labs, used internally by engineering, sales & R&D teams. Lots of
-            complex workflows, editable grids, Excel imports, and enough
-            TypeScript to question my career choices.
+            When I'm not writing TypeScript, you'll usually find me
+            experimenting in the kitchen with recipes I had to Google first,
+            staying <span className="text-accent2">consistent at the gym</span>,
+            or catching up on whatever anime has my attention that week.
           </p>
+
           <p className="text-[17px] leading-[1.8] text-[#aaa] mb-6">
-            Away from the keyboard: cooking things I had to research before I
-            could eat, staying{" "}
-            <span className="text-accent2">consistent at the gym</span>, and
-            following whatever anime has me hooked. Someday - open land, cattle,
-            and things I planted and watched grow. The anti-Jira retirement
-            plan.
+            Long term, the goal is simple: a piece of land, a few cattle, and
+            the chance to spend more time growing things than managing tickets.
+            Consider it my{" "}
+            <span className="text-accent2">anti-Jira retirement plan</span>.
           </p>
           <div className="mt-8">
             <div
