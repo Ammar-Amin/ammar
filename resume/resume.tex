@@ -1,0 +1,198 @@
+%---- Required Packages ----
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+
+\setlength{\footskip}{4.08003pt}
+\pagestyle{fancy}
+\fancyhf{}
+\geometry{left=1.0cm, top=1cm, right=1cm, bottom=1cm}
+\urlstyle{same}
+\raggedright
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+% Custom commands
+\newcommand{\resumeSubheading}[4]{
+    \item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} & \footnotesize{#2} \\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+% {Name}{Tech stack}{Link}{Dates} -- leave Dates as {} if not applicable
+\newcommand{\resumeProject}[4]{
+    \item
+    \textbf{#1} \hfill {\footnotesize #3} \\
+    \footnotesize #2 \hfill {\footnotesize #4}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeItemListStart}{
+    \begin{itemize}[leftmargin=3ex, itemsep=0mm, label=$\vcenter{\hbox{\tiny$\bullet$}}$]\small
+}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2mm}}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0pt, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{4mm}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+
+\begin{document}
+\pagestyle{fancy}
+\fancyhf{} % clear all header/footer
+\renewcommand{\headrulewidth}{0pt} % remove top line
+\renewcommand{\footrulewidth}{0pt} % remove bottom line
+
+\fontfamily{cmr}\selectfont
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{{\LARGE Ammar Amin}} & Email: \href{mailto:ammaramin5253@gmail.com}{ammaramin5253@gmail.com} \\
+    Portfolio: \href{https://ammar-amin.netlify.app}{ammar-amin.netlify.app} & Mobile: +91-9325416499 \\
+    Github: \href{https://github.com/Ammar-Amin}{github.com/Ammar-Amin} \\
+\end{tabular*}
+
+%-----------Professional Summary-----------------
+\section{Professional Summary}
+\begin{itemize}[leftmargin=0.1in, label={}]
+    \item \small{
+        Frontend Developer with 1.5+ years of professional experience building enterprise-grade Angular applications.
+        Delivered complete frontend for ChillMaster — a cloud-based chiller selection platform with role-based workflows.
+        Strong foundation in TypeScript, RxJS, and backend integration with Node.js and PostgreSQL.
+        Actively growing towards full-stack development.
+    }
+\end{itemize}
+\vspace{-6pt}
+
+%-----------Technical skills-----------------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.1in, label={}]
+    \item \small{
+        \textbf{Frontend}: Angular, TypeScript, RxJS, Reactive Forms, State Management, HTML5, Tailwind CSS, Responsive Design \\
+        \textbf{Backend \& Databases}: Node.js, Express.js, REST APIs, MongoDB, PostgreSQL, JWT Authentication \\
+        \textbf{Tools \& Practices}: Git, GitHub, Jira, Agile/Scrum, AWS S3
+    }
+\end{itemize}
+\vspace{-10pt}
+
+%-----------Experience-----------------
+\section{Experience}
+\resumeSubHeadingListStart
+    \resumeProject
+        {ChillMaster — Blue Star}
+        {Angular, TypeScript, Firebase (SSO), TailwindCSS, AWS S3, Bitbucket, Jira}
+        {\href{https://chillmaster.bluestarindia.com/}{chillmaster.bluestarindia.com}}
+        {Oct 2024 -- Present}
+
+    \resumeItemListStart
+        \item Built the entire frontend for ChillMaster — a cloud-based chiller selection \& performance analysis platform used by engineers, sales \& R\&D teams at Bluestar India.
+        \item Implemented modular component-based architecture with lazy-loaded routes, route guards, and role-based access control (SuperAdmin, Engineer, R\&D, Sales).
+        \item Created reusable editable grid/table components for inline editing and dynamic row/column management, reducing duplicate code.
+        \item Handled Excel bulk import/validation, AWS S3 file uploads, and client-side validation/error reporting.
+        \item Collaborated with backend (Node.js, PostgreSQL), QA, and product owners via Jira; participated in sprint planning and code reviews.
+    \resumeItemListEnd
+
+    \resumeProject
+        {Encase — Freelance Work}
+        {React / TypeScript · NestJS · Pipecat Cloud · GCP}
+        {\href{https://encase.ai}{encase.ai}}
+        {} % TODO: dates
+
+    \resumeItemListStart
+        \item Contributed full-stack features for an AI mock-interview product (React + NestJS): onboarding, profile, and interview session flows.
+        \item Shipped LinkedIn-aligned structured location and country-driven phone validation across onboarding and profile, with matching NestJS APIs, DTOs, and tests.
+        \item Owned AI interview infrastructure including Pipecat Cloud CI/CD (QA/prod agent deployment), live Simli video integration, interview consent/audit APIs, and PostHog product + AI-cost telemetry.
+        \item Improved production readiness with SEO/SSG for public pages, GA4/PostHog analytics, legal AI disclosure pages, and UUID business-key migrations on core NestJS/Mongo entities.
+    \resumeItemListEnd
+
+    \resumeProject
+        {Greein Platform}
+        {Frontend Enhancements — Responsive UI, Performance Optimization}
+        {\href{https://greein.com/}{greein.com}}
+        {} % TODO: dates
+
+    \resumeItemListStart
+        \item Converted a desktop-only platform into a fully responsive application, improving usability across mobile devices.
+        \item Resolved UI and functional bugs, enhancing overall stability and user experience.
+        \item Improved UI responsiveness by optimizing component rendering and reducing unnecessary updates.
+        \item Worked with amCharts to implement and refine interactive data visualizations.
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-6mm}
+
+%-----------Personal Projects-----------------
+\section{Personal Projects}
+\resumeSubHeadingListStart
+    \resumeProject
+        {Amin Estate}
+        {React, Redux, TailwindCSS, Express.js, MongoDB, Node.js}
+        {\href{https://estate-mern-0kti.onrender.com/}{estate-mern-0kti.onrender.com}}
+        {}
+
+    \resumeItemListStart
+        \item Built a real estate platform using the MERN stack emphasizing modern architecture and best practices.
+        \item Implemented advanced authentication including JWT and Google OAuth for secure user access.
+        \item Developed real-world CRUD operations for property listings, enhancing backend experience.
+        \item Enhanced UX with image uploads and advanced search functionality, fully hosted.
+    \resumeItemListEnd
+
+    % \resumeProject
+    %     {Blog Application}
+    %     {React, React Hook Forms, Appwrite}
+    %     {\href{https://blog-app-05.netlify.app/}{blog-app-05.netlify.app}}
+    %     {}
+
+    % \resumeItemListStart
+    %     \item Developed a full-featured blog application using React, Redux, React Hooks, Forms, and Appwrite for backend operations.
+    %     \item Integrated TinyMCE editor for creating and updating blog posts, enhancing the content creation experience.
+    %     \item Implemented comprehensive CRUD operations with Appwrite, including signup, signin, home, all posts, add post, and individual post pages.
+    % \resumeItemListEnd
+
+    % \resumeProject
+    %     {Qid Clone}
+    %     {TailwindCSS, JavaScript, React, React-Router}
+    %     {\href{https://qid-ui-by-ammar.vercel.app}{qid-clone.vercel.app}}
+    %     {}
+
+    % \resumeItemListStart
+    %     \item Successfully cloned a complex website in 3 days utilizing React, Tailwind CSS, and React Router for navigation.
+    %     \item Ensured responsive layout across all devices down to 320px, prioritizing user experience for mobile users.
+    %     \item Replicated website's core message and functionalities, demonstrating understanding of user needs.
+    % \resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-4.5mm}
+
+%-----------Education-----------
+\section{Education}
+\resumeSubHeadingListStart
+    \resumeSubheading
+        {Rashtrasant Tukadoji Maharaj Nagpur University}{CGPA: 7.8}
+        {Bachelor of Computer Applications (BCA)}{2023}
+    \resumeSubheading
+        {Progressive High School}{Percentage: 72.92}
+        {12th HSC, State}{2020}
+\resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+\end{document}

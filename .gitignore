@@ -5,3 +5,11 @@
 /.env.development.local
 /.env.test.local
 /.env.production.local
+# LaTeX build artifacts
+resume/*.aux
+resume/*.log
+resume/*.out
+resume/*.fls
+resume/*.fdb_latexmk
+resume/*.synctex.gz
+resume/resume.pdf

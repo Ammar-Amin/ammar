@@ -5,7 +5,7 @@ export default function HireMe() {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Ammar_05_04_2026.pdf";
+    link.href = "/resume.pdf";
     link.download = "Ammar_Amin_Resume.pdf";
     document.body.appendChild(link);
     link.click();
