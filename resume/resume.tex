@@ -76,10 +76,7 @@
 \section{Professional Summary}
 \begin{itemize}[leftmargin=0.1in, label={}]
     \item \small{
-        Frontend Developer with 1.5+ years of professional experience building enterprise-grade Angular applications.
-        Delivered complete frontend for ChillMaster — a cloud-based chiller selection platform with role-based workflows.
-        Strong foundation in TypeScript, RxJS, and backend integration with Node.js and PostgreSQL.
-        Actively growing towards full-stack development.
+        Full-stack engineer with a frontend focus and 2.5+ years of experience building enterprise Angular applications and AI-driven products with React, TypeScript, and NestJS. Led frontend development of ChillMaster, a cloud-based chiller selection platform with role-based workflows. Shipped onboarding flows, async job pipelines, CI/CD, and product analytics for AI-workflow and mock-interview platforms.
     }
 \end{itemize}
 \vspace{-6pt}
@@ -88,9 +85,10 @@
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.1in, label={}]
     \item \small{
-        \textbf{Frontend}: Angular, TypeScript, RxJS, Reactive Forms, State Management, HTML5, Tailwind CSS, Responsive Design \\
-        \textbf{Backend \& Databases}: Node.js, Express.js, REST APIs, MongoDB, PostgreSQL, JWT Authentication \\
-        \textbf{Tools \& Practices}: Git, GitHub, Jira, Agile/Scrum, AWS S3
+        \textbf{Frontend}: Angular, TypeScript, RxJS, Reactive Forms, React, State Management (Redux), HTML5, Tailwind CSS \\
+        \textbf{Backend \& Databases}: Node.js, NestJS, Express.js, REST APIs, MongoDB, MySQL, JWT Authentication \\
+        \textbf{Cloud \& DevOps}: GCP (Cloud Tasks), AWS S3, GitHub Actions CI/CD, Pipecat Cloud \\
+        \textbf{Tools \& Practices}: Git, GitHub, Jira, Agile/Scrum, PostHog, GA4
     }
 \end{itemize}
 \vspace{-10pt}
@@ -98,44 +96,63 @@
 %-----------Experience-----------------
 \section{Experience}
 \resumeSubHeadingListStart
-    \resumeProject
-        {ChillMaster — Blue Star}
+
+   \resumeProject
+        {ChillMaster \textnormal{(Client: Bluestar India)}}
         {Angular, TypeScript, Firebase (SSO), TailwindCSS, AWS S3, Bitbucket, Jira}
         {\href{https://chillmaster.bluestarindia.com/}{chillmaster.bluestarindia.com}}
-        {Oct 2024 -- Present}
+        {March 2025 -- Present}
 
     \resumeItemListStart
-        \item Built the entire frontend for ChillMaster — a cloud-based chiller selection \& performance analysis platform used by engineers, sales \& R\&D teams at Bluestar India.
-        \item Implemented modular component-based architecture with lazy-loaded routes, route guards, and role-based access control (SuperAdmin, Engineer, R\&D, Sales).
-        \item Created reusable editable grid/table components for inline editing and dynamic row/column management, reducing duplicate code.
-        \item Handled Excel bulk import/validation, AWS S3 file uploads, and client-side validation/error reporting.
-        \item Collaborated with backend (Node.js, PostgreSQL), QA, and product owners via Jira; participated in sprint planning and code reviews.
+        \item Led frontend development for ChillMaster, a cloud-based chiller selection \& performance analysis platform used by engineers, sales \& R\&D teams, owning the architecture across 790+ files.
+        \item Implemented a modular component-based architecture with lazy-loaded routes, route guards, and role-based access control (SuperAdmin, Engineer, R\&D, Sales), including a dedicated user management module for admin-level control.
+        \item Built the Performance Rating module from scratch, handling unit conversion, validation gating, and COP/IPLV/star-rating/pressure-drop calculations.
+        \item Designed and built a Cost Projector \& Compare tool, integrating dynamic metrics and cost calculation logic into a side-by-side comparison UI.
+        \item Created reusable editable grid/table components for inline editing and dynamic row/column management, and led a Data Editor optimization refactor to cut duplicate logic across modules.
+        \item Handled Excel bulk import/validation and document/report generation via AWS S3 presigned URLs, including previews and bulk report generation per chiller series.
+        \item Collaborated with backend (Node.js, MySQL), QA, and product owners via Jira; participated in sprint planning and code reviews.
     \resumeItemListEnd
 
     \resumeProject
-        {Encase — Freelance Work}
-        {React / TypeScript · NestJS · Pipecat Cloud · GCP}
+    {Neuron \textnormal{-- AI Workflow Builder}}
+    {React / TypeScript, NestJS, MongoDB, GCP Cloud Tasks, PostHog}
+    {}
+    {Aug 2026 -- Present}
+
+    \resumeItemListStart
+        \item Built a ``Build it with me'' guided onboarding for a visual AI-workflow canvas: a spotlight-based tutorial engine, a ``get started'' checklist, and a task-oriented docs rewrite.
+        \item Instrumented the onboarding and activation funnel with PostHog, and made onboarding state server-owned with atomic, race-free preference writes in NestJS.
+        \item Fixed ``false timeout'' failures in Describe-to-Create by moving generation to an async GCP Cloud Tasks job with idempotency keys, retry/stall handling, a real Stop control, and robust FE polling.
+        \item Added a workflow-level Stop button, per-neuron Waiting/Running/Completed status, and an ownership-checked stop-run API.
+        \item Hardened agent publishing: input-count bounds on every save path, publish-time compliance checks, and a migration removing empty hidden API inputs.
+        \item Fixed canvas zoom, neuron placement, viewport and autosave bugs; shipped a light/dark theme toggle, mobile fixes, and Prettier/lint-staged hooks.
+    \resumeItemListEnd
+
+    \resumeProject
+        {Encase \textnormal{-- AI Mock-Interview Platform}}
+        {React / TypeScript, NestJS, MongoDB, Pipecat Cloud, GCP}
         {\href{https://encase.ai}{encase.ai}}
-        {} % TODO: dates
+        {May 2026 -- Jul 2026}
 
     \resumeItemListStart
-        \item Contributed full-stack features for an AI mock-interview product (React + NestJS): onboarding, profile, and interview session flows.
+        \item Built full-stack features for an AI mock-interview product: onboarding (LinkedIn/resume import with manual fallback), profile, and interview session flows.
         \item Shipped LinkedIn-aligned structured location and country-driven phone validation across onboarding and profile, with matching NestJS APIs, DTOs, and tests.
-        \item Owned AI interview infrastructure including Pipecat Cloud CI/CD (QA/prod agent deployment), live Simli video integration, interview consent/audit APIs, and PostHog product + AI-cost telemetry.
-        \item Improved production readiness with SEO/SSG for public pages, GA4/PostHog analytics, legal AI disclosure pages, and UUID business-key migrations on core NestJS/Mongo entities.
+        \item Built Pipecat Cloud CI/CD (manual QA/prod deploy action with pinned, least-privilege workflows), live Simli video, consent/audit APIs, and MediaPipe face analytics with backend persistence.
+        \item Instrumented PostHog product and AI-cost telemetry; shipped SEO/SSG prerendering, GA4, and legal AI-disclosure pages.
+        \item Migrated core NestJS/Mongo entities to UUID business keys, with a production migration runbook and backfill.
     \resumeItemListEnd
 
     \resumeProject
-        {Greein Platform}
-        {Frontend Enhancements — Responsive UI, Performance Optimization}
+        {Greein Platform \textnormal{(Client: Octanom)}}
+        {Next.js, Responsive UI, Performance Optimization, amCharts} % <- fill in the real stack
         {\href{https://greein.com/}{greein.com}}
-        {} % TODO: dates
+        {} % <- dates
 
     \resumeItemListStart
         \item Converted a desktop-only platform into a fully responsive application, improving usability across mobile devices.
-        \item Resolved UI and functional bugs, enhancing overall stability and user experience.
+        \item Resolved UI and functional bugs, improving stability and user experience.
         \item Improved UI responsiveness by optimizing component rendering and reducing unnecessary updates.
-        \item Worked with amCharts to implement and refine interactive data visualizations.
+        \item Implemented and refined interactive data visualizations with amCharts.
     \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -157,29 +174,29 @@
         \item Enhanced UX with image uploads and advanced search functionality, fully hosted.
     \resumeItemListEnd
 
-    % \resumeProject
-    %     {Blog Application}
-    %     {React, React Hook Forms, Appwrite}
-    %     {\href{https://blog-app-05.netlify.app/}{blog-app-05.netlify.app}}
-    %     {}
+    \resumeProject
+        {Blog Application}
+        {React, React Hook Forms, Appwrite}
+        {\href{https://blog-app-05.netlify.app/}{blog-app-05.netlify.app}}
+        {}
 
-    % \resumeItemListStart
-    %     \item Developed a full-featured blog application using React, Redux, React Hooks, Forms, and Appwrite for backend operations.
-    %     \item Integrated TinyMCE editor for creating and updating blog posts, enhancing the content creation experience.
-    %     \item Implemented comprehensive CRUD operations with Appwrite, including signup, signin, home, all posts, add post, and individual post pages.
-    % \resumeItemListEnd
+    \resumeItemListStart
+        \item Developed a full-featured blog application using React, Redux, React Hooks, Forms, and Appwrite for backend operations.
+        \item Integrated TinyMCE editor for creating and updating blog posts, enhancing the content creation experience.
+        \item Implemented comprehensive CRUD operations with Appwrite, including signup, signin, home, all posts, add post, and individual post pages.
+    \resumeItemListEnd
 
-    % \resumeProject
-    %     {Qid Clone}
-    %     {TailwindCSS, JavaScript, React, React-Router}
-    %     {\href{https://qid-ui-by-ammar.vercel.app}{qid-clone.vercel.app}}
-    %     {}
+    \resumeProject
+        {Qid Clone}
+        {TailwindCSS, JavaScript, React, React-Router}
+        {\href{https://qid-ui-by-ammar.vercel.app}{qid-clone.vercel.app}}
+        {}
 
-    % \resumeItemListStart
-    %     \item Successfully cloned a complex website in 3 days utilizing React, Tailwind CSS, and React Router for navigation.
-    %     \item Ensured responsive layout across all devices down to 320px, prioritizing user experience for mobile users.
-    %     \item Replicated website's core message and functionalities, demonstrating understanding of user needs.
-    % \resumeItemListEnd
+    \resumeItemListStart
+        \item Successfully cloned a complex website in 3 days utilizing React, Tailwind CSS, and React Router for navigation.
+        \item Ensured responsive layout across all devices down to 320px, prioritizing user experience for mobile users.
+        \item Replicated website's core message and functionalities, demonstrating understanding of user needs.
+    \resumeItemListEnd
 \resumeSubHeadingListEnd
 \vspace{-4.5mm}
 
