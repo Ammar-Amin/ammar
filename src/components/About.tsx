@@ -10,11 +10,15 @@ const skills = [
   "React",
   "Redux / RTK",
   "Node.js",
+  "NestJS",
   "Express.js",
-  "PostgreSQL",
+  "MySQL",
   "MongoDB",
   "Tailwind CSS",
   "AWS S3",
+  "GCP Cloud Tasks",
+  "GitHub Actions",
+  "PostHog",
   "REST APIs",
   "JWT Auth",
   "Git / GitHub",
@@ -54,9 +58,11 @@ export default function About() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-[60px] items-start">
         <div ref={textRef} className="reveal">
           <p className="text-[17px] leading-[1.8] text-[#aaa] mb-6">
-            I'm a <strong className="text-text">Frontend Developer</strong> at
-            Blackcurrant Labs, building enterprise-grade Angular applications
-            for clients like Blue Star India. I like interfaces that feel{" "}
+            I'm a <strong className="text-text">Full-Stack Developer</strong> with
+            a frontend focus and 2.5+ years of experience. I build
+            enterprise Angular applications at Blackcurrant Labs for clients
+            like Blue Star India, and ship AI-driven products with React,
+            TypeScript and NestJS. I like interfaces that feel{" "}
             <span className="text-accent2">inevitable</span> — the kind where
             users stop noticing the UI and just get things done.
           </p>
@@ -85,7 +91,7 @@ export default function About() {
               {skills.map((skill) => (
                 <span
                   key={skill}
-                  className={`skill-tag ${["PostgreSQL", "MongoDB"].includes(skill) ? "green" : ""}`}
+                  className={`skill-tag ${["MySQL", "MongoDB"].includes(skill) ? "green" : ""}`}
                 >
                   {skill}
                 </span>

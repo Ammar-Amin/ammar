@@ -39,9 +39,9 @@ export default function Hero() {
         <strong className="text-text">
           fast, correct, and slightly addictive
         </strong>
-        . Currently shipping enterprise Angular applications at{" "}
+        . Currently shipping enterprise Angular apps at{" "}
         <span className="highlight-box">Blackcurrant Labs</span> for Blue Star
-        India.
+        India, and AI products with React, NestJS &amp; TypeScript.
         <br />
         Previously: a React fanboy. Always: curious. Occasionally: responsible
         for chaos.

@@ -28,10 +28,11 @@ export default function HireMe() {
           <p className="text-muted text-sm leading-relaxed max-w-md">
             I'm a{" "}
             <strong className="text-accent2">
-              Frontend & MERN Stack Developer
+              Full-Stack Developer (frontend-first)
             </strong>{" "}
             currently open to full-time roles, contract work, and interesting
-            collaborations. React, Angular, Node, Mongo — I ship end-to-end.
+            collaborations. Angular, React, TypeScript, NestJS — I ship
+            end-to-end, from onboarding flows to async pipelines.
           </p>
         </div>
 
